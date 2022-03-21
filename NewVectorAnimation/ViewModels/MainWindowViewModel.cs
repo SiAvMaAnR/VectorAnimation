@@ -9,17 +9,17 @@ namespace NewVectorAnimation.ViewModels
     public class MainWindowViewModel : BaseViewModel
     {
 
-        //private double angle;
+        private double angle;
 
-        //public double Angle
-        //{
-        //    get { return angle; }
-        //    set
-        //    {
-        //        angle = value;
-        //        OnPropertyChanged(nameof(angle));
-        //    }
-        //}
+        public double Angle
+        {
+            get { return angle; }
+            set
+            {
+                angle = value;
+                OnPropertyChanged(nameof(angle));
+            }
+        }
 
     }
 }
