@@ -26,39 +26,39 @@ namespace NewVectorAnimation
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            await Dispatcher.BeginInvoke(() =>
-            {
-                DoubleAnimationUsingPath animationX = new DoubleAnimationUsingPath()
-                {
-                    PathGeometry = this.WavePath.Data.GetFlattenedPathGeometry(),
-                    Source = PathAnimationSource.X,
-                    Duration = new Duration(TimeSpan.FromSeconds(20)),
-                    IsAdditive = true,
-                    IsCumulative = true
-                };
+            //    await Dispatcher.BeginInvoke(() =>
+            //    {
+            //        DoubleAnimationUsingPath animationX = new DoubleAnimationUsingPath()
+            //        {
+            //            PathGeometry = this.WavePath.Data.GetFlattenedPathGeometry(),
+            //            Source = PathAnimationSource.X,
+            //            Duration = new Duration(TimeSpan.FromSeconds(20)),
+            //            IsAdditive = true,
+            //            IsCumulative = true
+            //        };
 
-                DoubleAnimationUsingPath animationY = new DoubleAnimationUsingPath()
-                {
-                    PathGeometry = this.WavePath.Data.GetFlattenedPathGeometry(),
-                    Source = PathAnimationSource.Y,
-                    Duration = new Duration(TimeSpan.FromSeconds(20)),
-                };
+            //        DoubleAnimationUsingPath animationY = new DoubleAnimationUsingPath()
+            //        {
+            //            PathGeometry = this.WavePath.Data.GetFlattenedPathGeometry(),
+            //            Source = PathAnimationSource.Y,
+            //            Duration = new Duration(TimeSpan.FromSeconds(20)),
+            //        };
 
-                DoubleAnimationUsingPath animationAngle = new DoubleAnimationUsingPath()
-                {
-                    PathGeometry = this.WavePath.Data.GetFlattenedPathGeometry(),
-                    Source = PathAnimationSource.Angle,
-                    Duration = new Duration(TimeSpan.FromSeconds(20)),
-                };
+            //        DoubleAnimationUsingPath animationAngle = new DoubleAnimationUsingPath()
+            //        {
+            //            PathGeometry = this.WavePath.Data.GetFlattenedPathGeometry(),
+            //            Source = PathAnimationSource.Angle,
+            //            Duration = new Duration(TimeSpan.FromSeconds(20)),
+            //        };
 
-                Storyboard.SetTargetName(animationX, "ShipPath");
-                Storyboard.SetTargetName(animationY, "ShipPath");
-                Storyboard.SetTargetName(animationAngle, "ShipPath");
+            //        Storyboard.SetTargetName(animationX, "ShipPath");
+            //        Storyboard.SetTargetName(animationY, "ShipPath");
+            //        Storyboard.SetTargetName(animationAngle, "ShipPath");
 
-                Storyboard.SetTargetProperty(animationX, new PropertyPath("(Canvas.Left)"));
-                Storyboard.SetTargetProperty(animationY, new PropertyPath("(Canvas.Top)"));
-                Storyboard.SetTargetProperty(animationAngle, new PropertyPath("(UIElement.RenderTransform).(RotateTransform.Angle)"));
-            });
+            //        Storyboard.SetTargetProperty(animationX, new PropertyPath("(Canvas.Left)"));
+            //        Storyboard.SetTargetProperty(animationY, new PropertyPath("(Canvas.Top)"));
+            //        Storyboard.SetTargetProperty(animationAngle, new PropertyPath("(UIElement.RenderTransform).(RotateTransform.Angle)"));
+            //    });
 
         }
     }
